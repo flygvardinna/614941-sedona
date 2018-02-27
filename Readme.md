@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Оксана Жук](https://up.htmlacademy.ru/htmlcss/20/user/614941).
-* Наставник: `Неизвестно`.
+* Наставник: [Владимир Кабыш](https://htmlacademy.ru/profile/kabysh).
 
 ---
 
