@@ -32,15 +32,25 @@
     <div class="hotels-sorting">
       <strong>Найдено: 3</strong>
       <p>Сортировка:</p>
-      <div class="hotels-sorting-criterion">
-        <span class="hotels-sorting-criterion-button hotels-sorting-criterion-button-current">По цене</span>
-        <span class="hotels-sorting-criterion-button">По типу</span>
-        <span class="hotels-sorting-criterion-button">По рейтингу</span>
-      </div>
-      <div class="hotels-sorting-position">
-        <span class="hotels-sorting-position-button">По возрастанию</span>
-        <span class="hotels-sorting-position-button hotels-sorting-position-button-current">По убыванию</span>
-      </div>
+      <ul class="hotels-sorting-criterion">
+        <li>
+          <button type="button" class="hotels-sorting-criterion-button hotels-sorting-criterion-button-current">По цене</button>
+          </li>
+        <li>
+          <button type="button" class="hotels-sorting-criterion-button">По типу</button>
+          </li>
+        <li>
+          <button type="button" class="hotels-sorting-criterion-button">По рейтингу</button>
+          </li>
+      </ul>
+      <ul class="hotels-sorting-position">
+        <li>
+          <button type="button" class="hotels-sorting-position-button">По возрастанию</button>
+        </li>
+        <li>
+        <button type="button" class="hotels-sorting-position-button hotels-sorting-position-button-current">По убыванию</button>
+      </li>
+      </ul>
     </div>
     <ul class="hotels-list">
       <li class="hotel-item">
@@ -60,10 +70,11 @@
         <a class="button hotel-item-info-button" href="#">Подробнее</a>
         <a class="button hotel-item-book-button" href="#">Забронировать</a>
       </p>
-      <p class="hotel-item-rating">
-        <img src="img/5stars.svg" width="89" height="18" alt="5 звезд">
-        <span class="rating">Рейтинг: 8,5</span>
-      </li>
+      <ul class="hotel-item-rating">
+      <li class="hotel-stars">5 звезд</li>
+      <li class="hotel-rating">Рейтинг: 8,5</li>
+      </ul>
+    </li>
       <li class="hotel-item">
         <h3>
           <a href="desert-quail-inn.html">
@@ -81,10 +92,11 @@
         <a class="button hotel-item-info-button" href="#">Подробнее</a>
         <a class="button hotel-item-book-button" href="#">Забронировать</a>
       </p>
-      <p class="hotel-item-rating">
-        <img src="img/3stars.svg" width="65" height="18" alt="3 звезды">
-        <span class="rating">Рейтинг: 8,9</span>
-      </li>
+      <ul class="hotel-item-rating">
+      <li class="hotel-stars">3 звезды</li>
+      <li class="hotel-rating">Рейтинг: 8,9</li>
+      </ul>
+    </li>
       <li class="hotel-item">
         <h3>
           <a href="villas-at-poco-diablo.html">
@@ -102,10 +114,11 @@
         <a class="button hotel-item-info-button" href="#">Подробнее</a>
         <a class="button hotel-item-book-button" href="#">Забронировать</a>
       </p>
-      <p class="hotel-item-rating">
-        <img src="img/2stars.svg" width="40" height="18" alt="2 звезды">
-        <span class="rating">Рейтинг: 9,2</span>
-      </li>
+      <ul class="hotel-item-rating">
+      <li class="hotel-stars">2 звезды</li>
+      <li class="hotel-rating">Рейтинг: 9,2</li>
+      </ul>
+    </li>
     </ul>
   </section>
 </main>
