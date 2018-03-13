@@ -81,7 +81,7 @@
         <b>Заинтересовались?</b>
         <p>Укажите предполагаемые даты поездки,<br>
            и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <span class="searh-form-button">Поиск гостиницы в Седоне</span>
+        <button class="button" type="button">Поиск гостиницы в Седоне</button>
         <img src="index/map.png" width="1200" height="593" alt="Карта штата Аризона, где отмечена Седона">
       </section>
     </main>
@@ -96,13 +96,37 @@
       </ul>
       <p class="footer-copyright">
         Website by
-        <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="115" height="41" alt="HTML Academy"></a>
+        <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="115" height="41" alt="логотип HTML Academy"></a>
       </p>
     </footer>
 
     <section class="modal search-form-modal">
       <h3 class="visually-hidden">Форма поиска гостиницы</h3>
-      <!-- Здесь будет форма -->
+      <form action="https://echo.htmlacademy.ru" method="get">
+        <p class="search-form-item">
+          <label for="search-form-check-in">Дата заезда:</label>
+          <input id="search-form-check-in" type="text" name="check-in-date" value="24 апреля 2017" required>
+          <button class="search-form-calendar-button" type="button">Выбор даты заезда в календаре</button>
+        </p>
+        <p class="search-form-item">
+          <label for="search-form-check-out">Дата выезда:</label>
+          <input id="search-form-check-out" type="text" name="check-out-date" value="4 июля 2017" required>
+          <button class="search-form-calendar-button" type="button">Выбор даты выезда в календаре</button>
+        </p>
+        <p class="search-form-item">
+          <label for="search-form-adults">Взрослые:</label>
+          <button class="search-form-people-button remove-button" type="button">Уменьшить число</button>
+          <input id="search-form-adults" type="text" name="adults" value="2" required>
+          <button class="search-form-people-button add-button" type="button">Увеличить число</button>
+        </p>
+        <p class="search-form-item">
+          <label for="search-form-kids">Дети:</label>
+          <button class="search-form-people-button remove-button" type="button">Уменьшить число</button>
+          <input id="search-form-kids" type="text" name="kids" value="0" required>
+          <button class="search-form-people-button add-button" type="button">Увеличить число</button>
+        </p>
+        <button class="button" type="submit">Найти</button>
+      </form>
     </section>
   </body>
 </html>
