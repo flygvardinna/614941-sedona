@@ -7,9 +7,8 @@
   <body>
     <header class="main-header">
       <nav class="main-navigation">
-        <a class="main-header-logo" href="index.html">
+        <a class="main-header-logo" href="index.html" aria-label="Ссылка на главную страницу">
           <img src="img/logo.png" width="138" height="70" alt="Логотип City of Sedona">
-          Переход на главную страницу
         </a>
         <ul class="site-navigation">
           <li><a href="info.html">Информация</a></li>
@@ -30,15 +29,15 @@
             <legend>Инфраструктура:</legend>
             <ul>
               <li class="filter-option">
-                <input class="visually-hidden filter-input fulter-input-checkbox" type="checkbox" name="pool" id="filter-pool" checked>
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="pool" id="filter-pool" checked>
                 <label for="filter-pool">Бассейн</label>
               </li>
               <li class="filter-option">
-                <input class="visually-hidden filter-input fulter-input-checkbox" type="checkbox" name="parking" id="filter-parking">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="parking" id="filter-parking">
                 <label for="filter-parking">Парковка</label>
               </li>
               <li class="filter-option">
-                <input class="visually-hidden filter-input fulter-input-checkbox" type="checkbox" name="wifi" id="filter-wifi">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="wifi" id="filter-wifi">
                 <label for="filter-wifi">Wi-Fi</label>
               </li>
             </ul>
@@ -47,25 +46,33 @@
             <legend>Тип жилья:</legend>
             <ul>
               <li class="filter-option">
-                <input class="visually-hidden filter-input fulter-input-checkbox" type="checkbox" name="hotel" id="filter-hotel" checked>
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="hotel" id="filter-hotel" checked>
                 <label for="filter-hotel">Гостиница</label>
               </li>
               <li class="filter-option">
-                <input class="visually-hidden filter-input fulter-input-checkbox" type="checkbox" name="motel" id="filter-motel" checked>
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="motel" id="filter-motel" checked>
                 <label for="filter-motel">Мотель</label>
               </li>
               <li class="filter-option">
-                <input class="visually-hidden filter-input fulter-input-checkbox" type="checkbox" name="apartments" id="filter-apartments" checked>
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="apartments" id="filter-apartments" checked>
                 <label for="filter-apartments">Апартаменты</label>
               </li>
             </ul>
           </fieldset>
           <fieldset>
             <legend>Стоимость в сутки (р):</legend>
-            <p>
-            <label for="filter-price-range"><span class="filter-price">От 0 </span><span class="filter-price">до 3000</span></label>
+            <p class="filter-price-item">
+              <label for="filter-price-min">От </label>
+              <input type="text" id="filter-price-min" value="0" pattern="^[ 0-9]+$">
+            </p>
+            <p class="filter-price-item">
+              <label for="filter-price-max">До </label>
+              <input type="text" id="filter-price-max" value="3000" pattern="^[ 0-9]+$">
+            </p>
+            <p class="filter-price-item">
+            <label class="visually-hidden" for="filter-price-range">Установить стоимость от и до</label>
+            <input id="filter-price-range" type="range" name="range" min="0" max="4000" value="3000" disabled>
             <button class="filter-price-range-button" type="button">Нижняя планка цены</button>
-            <input id="filter-price-range" type="range" name="range" min="0" max="3000" value="2500" disabled>
             <button class="filter-price-range-button" type="button">Верхняя планка цены</button>
             </p>
           </fieldset>

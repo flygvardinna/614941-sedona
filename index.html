@@ -116,13 +116,13 @@
         <p class="search-form-item">
           <label for="search-form-adults">Взрослые:</label>
           <button class="search-form-people-button remove-button" type="button">Уменьшить число</button>
-          <input id="search-form-adults" type="text" name="adults" value="2" required>
+          <input id="search-form-adults" type="text" name="adults" value="2" pattern="^[ 0-9]+$" required>
           <button class="search-form-people-button add-button" type="button">Увеличить число</button>
         </p>
         <p class="search-form-item">
           <label for="search-form-kids">Дети:</label>
           <button class="search-form-people-button remove-button" type="button">Уменьшить число</button>
-          <input id="search-form-kids" type="text" name="kids" value="0" required>
+          <input id="search-form-kids" type="text" name="kids" value="0" pattern="^[ 0-9]+$" required>
           <button class="search-form-people-button add-button" type="button">Увеличить число</button>
         </p>
         <button class="button" type="submit">Найти</button>
