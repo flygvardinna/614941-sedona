@@ -1,0 +1,216 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #333333;
+  text-transform: uppercase;
+
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-navigation {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation a {
+  color: #000000;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+  color: #81b3d2;
+}
+
+.site-navigation a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.container {
+  background-color: #ffffff;
+}
+
+.promo {
+  background-color: #e0eef6;
+  background-image: url("../img/sedona_promo.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.promo-slogan {
+  background-color: #e0eef6;
+  background-image: url("../img/promo-slogan.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  text-align: center;
+}
+
+.features b {
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.features b + p {
+  line-height: 26px;
+}
+
+.features-list {
+  list-style: none;
+
+  background-color: #eeeeee;
+}
+
+.feature-item h3 {
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.features-list > li:first-child,
+.features-list > li:nth-child(2) {
+  color: #ffffff;
+
+  background-color: #81b3d2;
+}
+
+.tips-list {
+  list-style: none;
+
+  background-color: #ffffff;
+}
+
+.tip-item {
+  color: #333333;
+}
+
+.tip-item h4 {
+  color: #000000;
+}
+
+.search-form b {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.search-form b + p {
+  line-height: 24px;
+}
+
+.button {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  border: none;
+}
+
+.search-form .button {
+  background-color: #766357;
+}
+
+.search-form .button:hover,
+.search-form .button:focus {
+  background-color: #604e43;
+}
+
+.search-form .button:active {
+  color: rgba(255, 255, 255, 0.3);
+
+  background-color: #503e33;
+}
+
+.main-footer {
+  line-height: 26px;
+  color: #000000;
+  text-align: center;
+
+  background-color: rgba(250, 252, 248, 0.9);
+}
+
+.footer-hashtag {
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.footer-social {
+  list-style: none;
+}
+
+.footer-social a {
+  color: #000000;
+}
+
+
+.footer-copyright a {
+  vertical-align: middle;
+}
+
+/* Как менять цвет логотипа по ховеру? */
+
+.modal {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.search-form-modal input[type="text"]{
+  font: inherit;
+  color: #000000;
+  text-transform: uppercase;
+
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.search-form-modal input:hover {
+  background-color: #ebebeb;
+}
+
+.search-form-modal input:focus {
+  background-color: #ffffff;
+  border: 2px solid #e5e5e5; /*не поняла, как измерить ширину рамки, сделала на глаз*/
+}
+
+.search-form-search-button {
+  background-color: #81b3d2;
+}
+
+.search-form-search-button:hover,
+.search-form-search-button:focus {
+  background-color: #669ec0;
+}
+
+.search-form-search-button:active {
+  color: rgba(255, 255, 255, 0.3);
+
+  background-color: #5496bd;
+}

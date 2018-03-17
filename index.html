@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона. Главная</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -82,7 +85,7 @@
         <p>Укажите предполагаемые даты поездки,<br>
            и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <button class="button" type="button">Поиск гостиницы в Седоне</button>
-        <img src="index/map.png" width="1200" height="593" alt="Карта штата Аризона, где отмечена Седона">
+        <img src="img/map.png" width="1200" height="593" alt="Карта штата Аризона, где отмечена Седона">
       </section>
     </main>
     <footer class="main-footer">
@@ -100,9 +103,9 @@
       </p>
     </footer>
 
-    <section class="modal search-form-modal">
+    <section class="modal">
       <h3 class="visually-hidden">Форма поиска гостиницы</h3>
-      <form action="https://echo.htmlacademy.ru" method="get">
+      <form class="search-form-modal" action="https://echo.htmlacademy.ru" method="get">
         <p class="search-form-item">
           <label for="search-form-check-in">Дата заезда:</label>
           <input id="search-form-check-in" type="text" name="check-in-date" value="24 апреля 2017" required>
@@ -125,7 +128,7 @@
           <input id="search-form-kids" type="text" name="kids" value="0" pattern="^[ 0-9]+$" required>
           <button class="search-form-people-button add-button" type="button">Увеличить число</button>
         </p>
-        <button class="button" type="submit">Найти</button>
+        <button class="button search-form-search-button" type="submit">Найти</button>
       </form>
     </section>
   </body>
