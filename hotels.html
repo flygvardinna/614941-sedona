@@ -3,8 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона. Внутренняя</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="inner-page">
     <header class="main-header">
       <nav class="main-navigation">
         <a class="main-header-logo" href="index.html" aria-label="Ссылка на главную страницу">
@@ -107,7 +110,7 @@
         </div>
         <ul class="hotels-list">
           <li class="hotel-item">
-            <a href="amara-resort-and-spa.html">
+            <a class="hotel-name" href="amara-resort-and-spa.html">
               <h3>Amara Resort & SPA</h3>
               <p class="hotel-item-image">
                 <img src="img/amara-resort-and-spa.jpg" width="135" height="92" alt="Amara Resort & SPA">
@@ -118,8 +121,8 @@
               <span class="hotel-price">От 4000 р.</span>
             </p>
             <p class="hotel-item-buttons">
-              <a class="hotel-item-info-button" href="#">Подробнее</a>
-              <a class="hotel-item-book-button" href="#">Забронировать</a>
+              <a class="hotel-item-info-button button" href="#">Подробнее</a>
+              <a class="hotel-item-book-button button" href="#">Забронировать</a>
             </p>
             <ul class="hotel-item-rating">
               <li class="hotel-stars">5 звезд</li>
@@ -127,7 +130,7 @@
             </ul>
           </li>
           <li class="hotel-item">
-            <a href="desert-quail-inn.html">
+            <a class="hotel-name" href="desert-quail-inn.html">
               <h3>Desert Quail Inn</h3>
               <p class="hotel-item-image">
                 <img src="img/desert-quail-inn.jpg" width="135" height="92" alt="Desert Quail Inn">
@@ -138,8 +141,8 @@
               <span class="hotel-price">От 3000 р.</span>
             </p>
             <p class="hotel-item-buttons">
-              <a class="hotel-item-info-button" href="#">Подробнее</a>
-              <a class="hotel-item-book-button" href="#">Забронировать</a>
+              <a class="hotel-item-info-button button" href="#">Подробнее</a>
+              <a class="hotel-item-book-button button" href="#">Забронировать</a>
             </p>
             <ul class="hotel-item-rating">
               <li class="hotel-stars">3 звезды</li>
@@ -147,7 +150,7 @@
             </ul>
           </li>
           <li class="hotel-item">
-            <a href="villas-at-poco-diablo.html">
+            <a class="hotel-name" href="villas-at-poco-diablo.html">
               <h3>Villas At Poco Diablo</h3>
               <p class="hotel-item-image">
                 <img src="img/villas-at-poco-diablo.jpg" width="135" height="92" alt="Villas At Poco Diablo">
@@ -158,8 +161,8 @@
               <span class="hotel-price">От 2000 р.</span>
             </p>
             <p class="hotel-item-buttons">
-              <a class="hotel-item-info-button" href="#">Подробнее</a>
-              <a class="hotel-item-book-button" href="#">Забронировать</a>
+              <a class="hotel-item-info-button button" href="#">Подробнее</a>
+              <a class="hotel-item-book-button button" href="#">Забронировать</a>
             </p>
             <ul class="hotel-item-rating">
               <li class="hotel-stars">2 звезды</li>
@@ -179,7 +182,7 @@
         <li><a class="social-button" href="#">Ютьюб</a></li>
       </ul>
       <p class="footer-copyright">
-        Website by
+        <span>Website by </span>
         <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="115" height="41" alt="логотип HTML Academy"></a>
       </p>
     </footer>

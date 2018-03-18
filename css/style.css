@@ -12,6 +12,10 @@ body {
   background-color: #ffffff;
 }
 
+.inner-page {
+  background-color: #fefefe;
+}
+
 a {
   text-decoration: none;
 }
@@ -42,26 +46,31 @@ a {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.container {
+.site-navigation-current a {
+  color: #766357;
+}
+
+.site-navigation-current a:hover,
+.site-navigation-current a:focus,
+.site-navigation-current a:active {
+  color: #766357;
+}
+
+.main-container {
+  text-align: center;
+
   background-color: #ffffff;
 }
 
 .promo {
-  background-color: #e0eef6;
-  background-image: url("../img/sedona_promo.jpg");
-  background-position: top center;
-  background-repeat: no-repeat;
-}
+  width: 100%;
+  min-height: 512px;
 
-.promo-slogan {
   background-color: #e0eef6;
-  background-image: url("../img/promo-slogan.png");
-  background-position: top center;
+  background-image: url("../img/promo-slogan.png"), url("../img/sedona_promo.jpg");
+  background-position: center, top;
   background-repeat: no-repeat;
-}
-
-.container {
-  text-align: center;
+  background-size: auto, cover;
 }
 
 .features b {
@@ -75,14 +84,8 @@ a {
 }
 
 .features-list {
-  list-style: none;
-
   background-color: #eeeeee;
-}
-
-.feature-item h3 {
-  font-size: 21px;
-  font-weight: 700;
+  list-style: none;
 }
 
 .features-list > li:first-child,
@@ -92,10 +95,37 @@ a {
   background-color: #81b3d2;
 }
 
-.tips-list {
-  list-style: none;
+.feature-item h3 {
+  font-size: 21px;
+  font-weight: 700;
+}
 
+.feature-with-photo {
+  width: 34%;
+  height: auto;
+}
+
+.feature-photo {
+  width: 66%;
+  min-height: 256px;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.feature-photo:first-child {
+  background-color: #7c6355;
+  background-image: url("../img/devils_bridge.jpg");
+}
+
+div.feature-with-photo + .feature-photo {
+  background-color: #9b9a83;
+  background-image: url("../img/real_city.jpg");
+}
+
+.tips-list {
   background-color: #ffffff;
+  list-style: none;
 }
 
 .tip-item {
@@ -130,6 +160,11 @@ a {
   border: none;
 }
 
+.inner-page .button {
+  font-size: 14px;
+  line-height: 21px;
+}
+
 .search-form .button {
   background-color: #766357;
 }
@@ -145,12 +180,175 @@ a {
   background-color: #503e33;
 }
 
+.filters {
+  width: 100%;
+  min-height: 217px;
+
+  background-color: #6e99c1;
+  background-image: url("../img/sedona_promo_blur.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.filter {
+  line-height: 21px;
+  color: #ffffff;
+}
+
+.filter fieldset {
+  border: none;
+}
+
+.filter legend {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.filter ul {
+  list-style: none;
+}
+
+.filter-button {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+
+  background-color: transparent;
+  border: 2px solid #ffffff;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  color: #000000;
+
+  background-color: #ffffff;
+  border: none;
+}
+
+.hotels-sorting {
+  font-size: 12px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.hotels-sorting strong {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.hotels-sorting ul {
+  list-style: none;
+}
+
+.hotels-sorting-criterion a {
+  color: rgba(0, 0, 0, 0.3);
+
+  border-bottom: 1px dotted #81b3d2;
+}
+
+.hotels-sorting-criterion a:hover,
+.hotels-sorting-criterion a:focus {
+  color: #81b3d2;
+}
+
+.hotels-sorting-criterion a:active {
+  color: #000000;
+
+  border: none;
+}
+
+.hotels-sorting-criterion-current a {
+  color: #81b3d2;
+
+  border: none;
+}
+
+.hotels-list {
+  list-style: none;
+}
+
+.hotel-item {
+  border-top: 1px solid #e5e5e5;
+}
+
+.hotel-item:last-child {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+a.hotel-name {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+  text-align: left;
+}
+
+a.hotel-name:hover,
+a.hotel-name:focus {
+  color: #81b3d2;
+}
+
+a.hotel-name:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.hotel-item-info {
+  text-align: left;
+}
+.hotel-item-info-button {
+  background-color: #81b3d2;
+}
+
+.hotel-item-info-button:hover,
+.hotel-item-info-button:focus {
+  background-color: #669ec0;
+}
+
+.hotel-item-info-button:active {
+  color: rgba(255, 255, 255, 0.3);
+
+  background-color: #5496bd;
+}
+
+.hotel-item-book-button {
+  background-color: #766357;
+}
+
+.hotel-item-book-button:hover,
+.hotel-item-book-button:focus {
+  background-color: #604e43;
+}
+
+.hotel-item-book-button:active {
+  color: rgba(255, 255, 255, 0.3);
+
+  background-color: #503e33;
+}
+
+.hotel-item-rating {
+  text-align: right;
+
+  list-style: none;
+}
+
+.hotel-rating {
+  color: #666666;
+
+  background-color: #f2f2f2;
+}
+
 .main-footer {
   line-height: 26px;
   color: #000000;
   text-align: center;
 
-  background-color: rgba(250, 252, 248, 0.9);
+  opacity: 0.9;
+}
+
+.inner-page .main-footer {
+  opacity: 1;
 }
 
 .footer-hashtag {
@@ -166,12 +364,13 @@ a {
   color: #000000;
 }
 
-
-.footer-copyright a {
+.footer-copyright span {
   vertical-align: middle;
 }
 
-/* Как менять цвет логотипа по ховеру? */
+.footer-copyright img {
+  vertical-align: top;
+}
 
 .modal {
   font-size: 14px;
@@ -197,7 +396,7 @@ a {
 
 .search-form-modal input:focus {
   background-color: #ffffff;
-  border: 2px solid #e5e5e5; /*не поняла, как измерить ширину рамки, сделала на глаз*/
+  border: 2px solid #e5e5e5;
 }
 
 .search-form-search-button {
