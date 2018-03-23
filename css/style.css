@@ -137,6 +137,7 @@ input[type="checkbox"].visually-hidden {
   margin: 0 auto;
 
   text-align: center;
+  word-wrap: break-word;
 
   background-color: #ffffff;
   box-shadow:
