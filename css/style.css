@@ -49,17 +49,20 @@ input[type="checkbox"].visually-hidden {
   color: #000000;
 
   background-color: #ffffff;
-
-  outline: 2px solid yellow;
+  box-shadow:
+  5px -5px 15px 0 rgba(0, 1, 1, 0.2),
+  -5px -5px 15px 0 rgba(0, 1, 1, 0.2);
 }
 
 .main-header-logo {
   position: absolute;
-  left: 531px;
+  left: 50%;
 
   width: 138px;
   height: 70px;
   margin: 0 auto;
+
+  transform: translateX(-50%);
 
   outline: 2px solid yellow;
 }
@@ -101,6 +104,7 @@ input[type="checkbox"].visually-hidden {
 .site-navigation li:nth-child(3) {
   margin-left: auto;
 }
+
 .site-navigation li:last-child {
   margin-left: 74px;
 }
@@ -135,8 +139,9 @@ input[type="checkbox"].visually-hidden {
   text-align: center;
 
   background-color: #ffffff;
-
-  outline: 2px solid yellow;
+  box-shadow:
+  5px -5px 15px 0 rgba(0, 1, 1, 0.2),
+  -5px -5px 15px 0 rgba(0, 1, 1, 0.2); /*на главной внизу не хватает 5 пикселей тени, на внутренней в футере дырка*/
 }
 
 .promo {
@@ -144,10 +149,11 @@ input[type="checkbox"].visually-hidden {
   min-height: 508px; /*min-height 512px для резины, в фиксированной там высота 508 с маской*/
 
   background-color: #e0eef6;
-  background-image: url("../img/promo-slogan.png"), url("../img/sedona_promo.jpg");
-  background-position: center, top;
+  background-image: url("../img/promo-slogan.png"), url("../img//sedona_shape_big.png"), url("../img/sedona_promo.jpg");
+  background-position: center 48.5%, 0% 100%, center 28.5%; /* в макете to the gorgeous смещено на пиксель правее, остальное совпдает идеально*/
   background-repeat: no-repeat;
-  background-size: auto, cover;
+  background-size: auto, auto, cover;
+
 }
 
 .features .container {
@@ -187,8 +193,6 @@ input[type="checkbox"].visually-hidden {
   width: 100%;
 
   color: #ffffff;
-
-  background-color: #81b3d2;
 }
 
 .feature-item {
@@ -207,6 +211,8 @@ input[type="checkbox"].visually-hidden {
 
 .feature-with-photo {
   width: 400px;
+
+  background-color: #81b3d2;
 }
 
 .feature-photo {
@@ -217,14 +223,14 @@ input[type="checkbox"].visually-hidden {
   background-size: contain;
 }
 
-.feature-photo:first-child {
-  background-color: #7c6355;
-  background-image: url("../img/devils_bridge.jpg");
-}
-
 div.feature-with-photo + .feature-photo {
   background-color: #9b9a83;
   background-image: url("../img/real_city.jpg");
+}
+
+.feature-photo:first-child {
+  background-color: #7c6355;
+  background-image: url("../img/devils_bridge.jpg");
 }
 
 .tips-list {
@@ -323,7 +329,9 @@ div.feature-with-photo + .feature-photo {
   margin: 0 auto;
   padding: 0;
 
-  outline: 2px solid yellow;
+  box-shadow:
+  5px -5px 15px 0 rgba(0, 1, 1, 0.2),
+  -5px -5px 15px 0 rgba(0, 1, 1, 0.2);
 }
 
 .filters {
@@ -335,7 +343,7 @@ div.feature-with-photo + .feature-photo {
   padding-bottom: 30px;
 
   background-color: #6e99c1;
-  background-image: url("../img/sedona_promo_blur.jpg");
+  background-image: url("../img/sedona_promo_blur.jpg"); /*картинка в макете чуть иначе расположена*/
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -353,8 +361,6 @@ div.feature-with-photo + .feature-photo {
 
   line-height: 21px;
   color: #ffffff;
-
-  outline: 2px solid green;
 }
 
 .filter fieldset {
@@ -646,9 +652,13 @@ a.hotel-name:active {
 }
 
 .main-footer {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
   width: 1200px;
+  min-height: 120px;
   margin: 0 auto;
-  padding: 0;
+  padding: 10px;
 
   line-height: 26px;
   color: #000000;
@@ -657,33 +667,24 @@ a.hotel-name:active {
   background-color: inherit;
   opacity: 0.9;
 
-  outline: 2px solid yellow;
+  box-shadow:
+  5px 5px 15px 0 rgba(0, 1, 1, 0.2),
+  -5px 5px 15px 0 rgba(0, 1, 1, 0.2);
 }
 
 .index-footer {
   position: relative;
   bottom: 125px; /*не нашла, откуда берутся лишние 5 пикселей внизу*/
+
+  box-shadow: none;
 }
 
 .inner-page .main-footer {
   opacity: 1;
 }
 
-.main-footer .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 1056px;
-  min-height: 120px;
-  margin: 0 auto;
-
-  text-align: center;
-
-  outline: 2px solid green;
-}
-
 .footer-hashtag {
-  width: 240px;
+  width: 400px;
   margin: 0;
   padding: 0;
 
@@ -694,7 +695,7 @@ a.hotel-name:active {
 }
 
 .footer-social {
-  width: 244px;
+  width: 400px;
   margin: 0;
 
   list-style: none;
@@ -707,18 +708,11 @@ a.hotel-name:active {
 }
 
 .footer-copyright {
-  width: 240px;
+  width: 400px;
   margin: 0;
+  padding: 0;
 
   outline: 2px solid yellow;
-}
-
-.footer-copyright span {
-  vertical-align: middle;
-}
-
-.footer-copyright img {
-  vertical-align: top;
 }
 
 .modal {
