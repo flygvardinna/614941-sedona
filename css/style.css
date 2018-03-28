@@ -160,7 +160,7 @@ input[type="checkbox"].visually-hidden {
 
   background-color: #e0eef6;
   background-image: url("../img/promo-slogan.png"), url("../img//sedona_shape_big.png"), url("../img/sedona_promo.jpg");
-  background-position: center 48.5%, 0% 100%, center 28.5%; /* в макете to the gorgeous смещено на пиксель правее, остальное совпдает идеально*/
+  background-position: center 48.5%, 0% 100%, center 28.5%;
   background-repeat: no-repeat;
   background-size: auto, auto, cover;
 
@@ -450,43 +450,60 @@ div.feature-with-photo + .feature-photo {
 }
 
 .search-form-container {
-  width: 458px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-}
-
-.search-form-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  width: 458px;
   margin: 0;
   padding: 0;
 }
 
-.calendar-item {
-  position: relative;
+.date-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-}
-
-.calendar-item:first-of-type {
   margin-bottom: 29px;
-}
-
-.calendar-item:nth-of-type(2) {
-  margin-bottom: 30px;
+  padding: 0;
 }
 
 .people-item {
-  position: relative;
-  width: 225px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 229px;
+  margin-top: 1px;
+  padding: 0;
 }
 
-.people-item:first-of-type {
-  margin-right: auto;
+.search-form-item label {
+  max-width: 100px;
+  margin: 0;
+  padding: 0;
 }
 
-.search-form-item input {
+.search-form-item:nth-of-type(3) label {
+  margin-right: 14px;
+}
+
+.date-input {
+  display: flex;
+  justify-content: space-between;
+  width: 346px;
+  margin: 0;
+  padding: 0;
+}
+
+.people-input {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 114px;
+  margin: 0;
+  padding: 0;
+}
+
+.search-form-input input {
   height: 38px;
   box-sizing: border-box;
   padding-top: 9px;
@@ -502,68 +519,56 @@ div.feature-with-photo + .feature-photo {
   border: none;
 }
 
-.search-form-item input:hover {
+.search-form-input input:hover {
   background-color: #ebebeb;
 }
 
-.search-form-item input:focus {
+.search-form-input input:focus {
   background-color: #ffffff;
   border: 2px solid #e5e5e5;
 }
 
-.calendar-item input {
-  width: 346px;
+.date-input input {
+  width: 307px;
 }
 
-.calendar-item button {
-  position: absolute;
-  right: 0;
+.people-input input {
+  width: 42px;
+}
+
+.people-input:last-of-type {
+  margin-left: 27px;
+}
+
+.date-input button {
   width: 39px;
   height: 38px;
+  margin: 0;
+  padding: 0;
   border: 0;
   background-color: #f2f2f2;
 }
 
-.calendar-item path {
+.date-input path {
   fill: #cacaca;
 }
 
-.search-form-calendar-button:hover path,
-.search-form-calendar-button:focus path {
+.date-input:hover path,
+.date-input:focus path {
   fill: #000000;
 }
 
-.search-form-calendar-button:active path {
+.date-input:active path {
   fill: #81b3d2;
 }
 
-.people-item input {
-  width: 114px;
-  padding-left: 54px;
-}
-
-.people-item:last-of-type label {
-  margin-left: auto;
-}
-
-.people-item:last-of-type input {
-  margin-left: 27px;
-}
-
-.people-item button {
-  width: 39px;
+.people-input button {
+  width: 36px;
   height: 38px;
-  position: absolute;
-  border: transparent;
+  margin: 0;
+  padding: 0;
+  border: 0;
   background-color: #f2f2f2;
-}
-
-.remove-button {
-  right: 75px;
-}
-
-.add-button {
-  right: 0px;
 }
 
 .remove-button:hover line,
@@ -619,7 +624,7 @@ div.feature-with-photo + .feature-photo {
 
 .filter {
   width: 1056px;
-  min-height: 156px;
+  min-height: 155px;
   margin: 0 auto;
   padding: 0;
 
@@ -705,7 +710,11 @@ div.feature-with-photo + .feature-photo {
   background-repeat: no-repeat;
 }
 
-/*
+
+.filter-input-checkbox:disabled + label {
+  cursor: default;
+}
+
 .filter-input-checkbox:disabled + label::before {
   content: "";
   position: absolute;
@@ -717,6 +726,8 @@ div.feature-with-photo + .feature-photo {
 
   background-image: url("../img/checkbox-off-disabled.svg");
   background-repeat: no-repeat;
+
+  cursor: default;
 }
 
 .filter-input-checkbox:checked:disabled + label::before{
@@ -730,7 +741,9 @@ div.feature-with-photo + .feature-photo {
 
   background-image: url("../img/checkbox-on-disabled.svg");
   background-repeat: no-repeat;
-} ПОЧЕМУ-ТО НЕ РАБОТАЕТ ЭТО ВСЕ. ТАКЖЕ ДОСТУПНОСТИ ЧЕКБОКСОВ С КЛАВИАТУРЫ НЕТ*/
+
+  cursor: default;
+}
 
 .filter-range {
   float: right;
@@ -771,7 +784,7 @@ div.feature-with-photo + .feature-photo {
   display: inline-block;
 
   font-size: 14px;
-  line-height: 30px; /*в макете line-height: 21px; в демке line-height: 38px; если поменять, выравнивается по ширине*/
+  line-height: 28px;
   vertical-align: top;
 
   cursor: pointer;
@@ -853,7 +866,7 @@ div.feature-with-photo + .feature-photo {
   padding: 6px 34px 5px 34px;
 
   font-size: 14px;
-  line-height: 21px; /*в демке line-height: 20px;*/
+  line-height: 21px;
   color: #ffffff;
   text-transform: uppercase;
 
@@ -926,7 +939,7 @@ div.feature-with-photo + .feature-photo {
   list-style: none;
 }
 
-.hotels-sorting-criterion a { /*Сортировка скачет по цене, отрегулируй отступы*/
+.hotels-sorting-criterion a {
   float: left;
   margin-right: 33px;
 
@@ -979,7 +992,7 @@ div.feature-with-photo + .feature-photo {
 }
 
 .hotels-sorting-position:active path {
-  fill: #231f20; /*при нажатии обе иконки становятся черными. Иконка вверх выше, чем в макете */
+  fill: #231f20;
 }
 
 .hotels-list {
@@ -1007,16 +1020,12 @@ div.feature-with-photo + .feature-photo {
 
 .hotel-item-image {
   width: 135px;
-  height: 90px;
   margin: 0;
   padding: 0;
   margin: 30px 20px 30px 0;
   padding-right: 10px;
-}
 
-.hotel-item-image img {
-  padding: 0;
-  margin: 0;
+  line-height: 0;
 }
 
 .hotel-item-info {
@@ -1098,63 +1107,39 @@ a.hotel-name:active {
 }
 
 .hotel-item-rating {
-    display: inline-block;
-    position: relative;
-
-    width: 241px;
-    padding: 0;
-
-    list-style: none;
+  width: 241px;
 }
 
-.hotel-4-stars::after {
-  content: "";
-  position: absolute;
-  top: 29px;
-  right: 0;
-
-
-  width: 89px;
+.hotel-stars {
   height: 17px;
-  background-image: url("../img/star.svg");
-  background-repeat: space; /*Расстояние между звездами скачет, отрегулируй*/
-  background-size: 18px 17px;
+  margin-top: 29px;
+  list-style: none;
+
+  vertical-align: top;
 }
 
-.hotel-3-stars::after {
-  content: "";
-  position: absolute;
-  top: 29px;
-  right: 0;
-
-  width: 64px;
+.hotel-stars li {
+  float: right;
+  margin-left: 6px;
+  width: 18px;
   height: 17px;
-  background-image: url("../img/star.svg");
-  background-repeat: space;
-  background-size: 18px 17px;
-}
 
-.hotel-2-stars::after {
-  content: "";
-  position: absolute;
-  top: 29px;
-  right: 0;
-
-  width: 41px;
-  height: 17px;
   background-image: url("../img/star.svg");
-  background-repeat: space;
+  background-repeat: no-repeat;
   background-size: 18px 17px;
 }
 
 .hotel-rating {
   float: right;
-
   width: 110px;
-  margin-top: 93px;
   box-sizing: border-box;
+  margin-top: 47px;
+  margin-bottom: 29px;
   padding: 3px 12px 3px 15px;
 
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
   color: #666666;
 
   background-color: #f2f2f2;
