@@ -274,7 +274,6 @@ div.feature-with-photo + .feature-photo {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  /*align-content: center;*/
   align-items: center;
   width: 100%;
   margin: 0;
@@ -517,6 +516,8 @@ div.feature-with-photo + .feature-photo {
 
   background-color: #f2f2f2;
   border: none;
+
+  outline: none;
 }
 
 .search-form-input input:hover {
@@ -540,7 +541,7 @@ div.feature-with-photo + .feature-photo {
   margin-left: 27px;
 }
 
-.date-input button {
+.calendar-button {
   width: 39px;
   height: 38px;
   margin: 0;
@@ -549,16 +550,16 @@ div.feature-with-photo + .feature-photo {
   background-color: #f2f2f2;
 }
 
-.date-input path {
+.calendar-button path {
   fill: #cacaca;
 }
 
-.date-input:hover path,
-.date-input:focus path {
+.calendar-button:hover path,
+.calendar-button:focus path {
   fill: #000000;
 }
 
-.date-input:active path {
+.calendar-button:active path {
   fill: #81b3d2;
 }
 
@@ -709,7 +710,6 @@ div.feature-with-photo + .feature-photo {
   background-image: url("../img/checkbox-on.svg");
   background-repeat: no-repeat;
 }
-
 
 .filter-input-checkbox:disabled + label {
   cursor: default;
@@ -1052,6 +1052,9 @@ a.hotel-name h3 {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+}
+
+a.hotel-name {
   color: #000000;
 }
 
