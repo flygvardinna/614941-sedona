@@ -136,6 +136,7 @@ input[type="checkbox"].visually-hidden {
 
 .site-navigation-current a {
   color: #766357;
+  cursor: default;
 }
 
 .site-navigation-current a:hover,
@@ -517,7 +518,7 @@ div.feature-with-photo + .feature-photo {
   background-color: #f2f2f2;
   border: none;
 
-  outline: none;
+  outline: none; /*ПОСЛЕ ПРОВЕРКИ В БРАУЗЕРАХ УБРАТЬ*/
 }
 
 .search-form-input input:hover {
@@ -848,7 +849,7 @@ div.feature-with-photo + .feature-photo {
 }
 
 .range-toggle:hover {
-  background: #1c4f80;
+  transform: scale(1.1)
 }
 
 .range-toggle-min {
@@ -975,24 +976,24 @@ div.feature-with-photo + .feature-photo {
   vertical-align: top;
 }
 
-.hotels-sorting-position a {
+a.hotels-sorting-up-down {
   float: right;
   margin-left: 11px;
   margin-right: 1px;
 }
 
-.hotels-sorting-position path {
+a.hotels-sorting-up-down path {
   fill: #cacaca;
 }
 
-.hotels-sorting-position:hover path,
-.hotels-sorting-position:focus path,
-.hotels-sorting-position-current path {
-  fill: #81b3d2;
+a.hotels-sorting-up-down:hover path,
+a.hotels-sorting-up-down:focus path {
+  fill: #231f20;
 }
 
-.hotels-sorting-position:active path {
-  fill: #231f20;
+a.hotels-sorting-up-down:active path,
+a.hotels-sorting-position-current path {
+  fill: #81b3d2;
 }
 
 .hotels-list {
