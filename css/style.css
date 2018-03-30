@@ -512,6 +512,7 @@ div.feature-with-photo + .feature-photo {
   padding-right: 13px;
 
   font: inherit;
+  line-height: 18px;
   color: #000000;
   text-transform: uppercase;
 
@@ -996,6 +997,10 @@ a.hotels-sorting-position-current path {
   fill: #81b3d2;
 }
 
+a.hotels-sorting-up-down svg {
+  pointer-events: none;
+}
+
 .hotels-list {
   width: 100%;
   margin: 0 auto;
@@ -1217,6 +1222,10 @@ a.hotel-name:active {
 
 .social-button:active path {
   fill: #88b6d1;
+}
+
+.social-button svg {
+  pointer-events: none;
 }
 
 .footer-copyright {
