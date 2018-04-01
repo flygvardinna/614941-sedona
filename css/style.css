@@ -260,8 +260,9 @@ input[type="checkbox"].visually-hidden {
   width: 800px;
   min-height: 256px;
 
+  background-position: right;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
 div.feature-with-photo + .feature-photo {
@@ -443,10 +444,7 @@ div.feature-with-photo + .feature-photo {
 .modal {
   position: absolute;
   left: 50%;
-  bottom: 593px;
   z-index: 2;
-
-  display: none;
 
   width: 568px;
   box-sizing: border-box;
@@ -464,6 +462,10 @@ div.feature-with-photo + .feature-photo {
   box-shadow: 0 7px 15px rgba(0, 0, 0, 0.15);
 }
 
+.modal-hide {
+  display: none;
+}
+
 .modal-show {
   position: absolute;
   left: 50%;
@@ -478,21 +480,21 @@ div.feature-with-photo + .feature-photo {
 
 @keyframes show {
   0% {
-    visibility: hidden;
-    transform: translate(-50%, -593px);
-    transition-property: translate, visibility;
+    opacity: 0;
+    transform: translate(-50%, -100px);
+    transition-property: translate;
     transition-timing-function: linear;
   }
   90% {
-    visibility: hidden;
-    transform: translate(-50%, 385px);
-    transition-property: translate, visibility;
+    opacity: 0.5;
+    transform: translate(-50%, -20px);
+    transition-property: translate;
     transition-timing-function: linear;
   }
   100% {
-    visibility: visible;
-    transform: translate(-50%, 395px);
-    transition-property: translate, visibility;
+    opacity: 1;
+    transform: translate(-50%, 0);
+    transition-property: translate;
     transition-timing-function: linear;
   }
 }
@@ -583,6 +585,8 @@ div.feature-with-photo + .feature-photo {
 
 .people-input input {
   width: 42px;
+  box-sizing: border-box;
+  padding-left: 17px;
 }
 
 .people-input:last-of-type {
@@ -1030,27 +1034,27 @@ div.feature-with-photo + .feature-photo {
   vertical-align: top;
 }
 
-a.hotels-sorting-up-down {
+.hotels-sorting-up-down {
   float: right;
   margin-left: 11px;
   margin-right: 1px;
 }
 
-a.hotels-sorting-up-down path {
+.hotels-sorting-up-down path {
   fill: #cacaca;
 }
 
-a.hotels-sorting-up-down:hover path,
-a.hotels-sorting-up-down:focus path {
+.hotels-sorting-up-down:hover path,
+.hotels-sorting-up-down:focus path {
   fill: #231f20;
 }
 
-a.hotels-sorting-up-down:active path,
-a.hotels-sorting-position-current path {
+.hotels-sorting-up-down:active path,
+.hotels-sorting-position-current path {
   fill: #81b3d2;
 }
 
-a.hotels-sorting-up-down svg {
+.hotels-sorting-up-down svg {
   pointer-events: none;
 }
 
@@ -1067,8 +1071,7 @@ a.hotels-sorting-up-down svg {
   justify-content: space-between;
   width: 1200px;
   box-sizing: border-box;
-  margin: 0;
-  padding: 0 73px 0 72px;
+  padding: 25px 72px 30px 72px;
 
   border-top: 1px solid #e5e5e5;
 }
@@ -1080,8 +1083,9 @@ a.hotels-sorting-up-down svg {
 .hotel-item-image {
   width: 135px;
   margin: 0;
+  margin-right: 20px;
   padding: 0;
-  margin: 30px 20px 30px 0;
+  padding-top: 5px;
   padding-right: 10px;
 
   line-height: 0;
@@ -1089,7 +1093,7 @@ a.hotels-sorting-up-down svg {
 
 .hotel-item-info {
   width: 562px;
-  margin: 0;
+  box-sizing: border-box;
   margin-right: auto;
   padding: 0;
 
@@ -1104,8 +1108,7 @@ a.hotels-sorting-up-down svg {
   padding: 0;
 }
 
-a.hotel-name h3 {
-  margin-top: 25px;
+.hotel-name h3 {
   margin-bottom: 7px;
 
   font-size: 21px;
@@ -1113,16 +1116,16 @@ a.hotel-name h3 {
   font-weight: 700;
 }
 
-a.hotel-name {
+.hotel-name {
   color: #000000;
 }
 
-a.hotel-name:hover,
-a.hotel-name:focus {
+.hotel-name:hover,
+.hotel-name:focus {
   color: #81b3d2;
 }
 
-a.hotel-name:active {
+.hotel-name:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -1139,6 +1142,7 @@ a.hotel-name:active {
 }
 
 .hotel-item-info-button {
+  margin: 0;
   background-color: #81b3d2;
 }
 
@@ -1174,7 +1178,7 @@ a.hotel-name:active {
 
 .hotel-stars {
   height: 17px;
-  margin-top: 29px;
+  padding-top: 4px;
   list-style: none;
 
   vertical-align: top;
@@ -1182,7 +1186,7 @@ a.hotel-name:active {
 
 .hotel-stars li {
   float: right;
-  margin-left: 6px;
+  margin-left: 5px;
   width: 18px;
   height: 17px;
 
@@ -1191,12 +1195,15 @@ a.hotel-name:active {
   background-size: 18px 17px;
 }
 
+.hotel-stars li:nth-child(2) {
+  margin-left: 6px;
+}
+
 .hotel-rating {
   float: right;
   width: 110px;
   box-sizing: border-box;
   margin-top: 47px;
-  margin-bottom: 29px;
   padding: 3px 12px 3px 15px;
 
   font-size: 14px;
