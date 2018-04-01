@@ -592,8 +592,10 @@ div.feature-with-photo + .feature-photo {
 .calendar-button {
   width: 39px;
   height: 38px;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  padding-top: 3px;
 
   border: 0;
   background-color: #f2f2f2;
