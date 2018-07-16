@@ -7,8 +7,8 @@
 
 Посмотреть сайт можно тут:
 
-главная https://ozacademyprj.000webhostapp.com/
-внутренняя https://ozacademyprj.000webhostapp.com/hotels.html
+[главная](https://ozacademyprj.000webhostapp.com),
+[внутренняя](https://ozacademyprj.000webhostapp.com/hotels.html)
 
 ---
 
